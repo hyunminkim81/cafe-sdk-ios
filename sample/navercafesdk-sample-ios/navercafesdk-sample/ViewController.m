@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
-@interface ViewController ()
+@interface ViewController () <NCSDKManagerDelegate>
 
 @end
 
@@ -21,7 +21,8 @@
     [[NCSDKManager getSharedInstance] setNaverLoginClientId:@"197CymaStozo7X5r2qR5"
                                      naverLoginClientSecret:@"evCgKH1kJL"
                                                      cafeId:28290504];
-    
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
@@ -47,6 +48,14 @@
 - (void)touchButton2 {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
+}
+
+#pragma mark - NCSDKManagerDelegate
+- (void)ncSDKViewDidLoad {
+    NSLog(@"ncSDKViewDidLoad");
+}
+- (void)ncSDKViewDidUnLoad {
+    NSLog(@"ncSDKViewDidUnLoad");
 }
 
 @end

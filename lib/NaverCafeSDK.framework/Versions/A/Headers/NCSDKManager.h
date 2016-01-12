@@ -7,12 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSUInteger, GLArticlePostType) {
     kGLArticlePostTypeImage = 1,
     kGLArticlePostTypeVideo = 2,
 };
+
+@protocol NCSDKManagerDelegate;
+
 @interface NCSDKManager : NSObject
 
+/*
+ 네이버 카페 NCSDKManagerDelegate
+ */
+@property (nonatomic, weak) id<NCSDKManagerDelegate> ncSDKDelegate;
 /*
  네이버 카페를 띄울 ViewController
  */
@@ -27,6 +35,8 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  NCSDKManager 객체 삭제
  */
 + (void)resetSharedInstance;
+
+- (void)setOrientationIsLandscape:(BOOL)orientationIsLandscape;
 
 /*
  네이버 카페 Root ViewController
@@ -90,4 +100,16 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  네이버 카페 ViewController에 제일 상단 ViewController 제거
  */
 - (void)dismissTopViewController;
+@end
+
+@protocol NCSDKManagerDelegate <NSObject>
+@optional
+/*
+ 네이버 카페 실행 콜백
+ */
+- (void)ncSDKViewDidLoad;
+/*
+ 네이버 카페 종료 콜백
+ */
+- (void)ncSDKViewDidUnLoad;
 @end

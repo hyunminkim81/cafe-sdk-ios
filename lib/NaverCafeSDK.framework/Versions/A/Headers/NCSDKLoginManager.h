@@ -18,6 +18,7 @@
  NCSDKLoginManager 싱글톤 객체
  */
 + (NCSDKLoginManager *)getSharedInstance;
++ (void)resetSharedInstance;
 
 /*
  AppDelegate URL Scheme 처리
