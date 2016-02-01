@@ -30,8 +30,7 @@
  */
 - (void)loginWithFinish:(void (^)(BOOL successACToken))finish;
 - (void)loginWithFinish:(void (^)(BOOL successACToken))finish
-                failure:(void (^)(NSError *error))failure
-                finally:(void (^)(void))finally;
+                failure:(void (^)(NSError *error))failure;
 
 
 /*

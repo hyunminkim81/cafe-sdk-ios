@@ -49,6 +49,17 @@
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
 }
+//공지사항 탭으로 시작
+- (void)presentTab {
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:1];
+}
+//특정 게시물 실행
+- (void)presentArticleId {
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+
+    [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:36];
+}
 
 #pragma mark - NCSDKManagerDelegate
 - (void)ncSDKViewDidLoad {
