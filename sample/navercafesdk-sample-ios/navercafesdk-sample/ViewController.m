@@ -30,7 +30,7 @@
     
     UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(button1.frame), 40, 40)];
     [button2 setImage:[UIImage imageNamed:@"icon2.png"] forState:UIControlStateNormal];
-    [button2 addTarget:self action:@selector(presentMenuId) forControlEvents:UIControlEventTouchUpInside];
+    [button2 addTarget:self action:@selector(touchButton2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
 
     UIButton *button3 = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(button2.frame), 40, 40)];
@@ -62,19 +62,6 @@
     [alert addButtonWithTitle:[NSString stringWithFormat:@"투명도 슬라이더"]];
     [alert show];
 }
-//공지사항 탭으로 시작
-- (void)presentTab {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-
-}
-//특정 게시물 실행
-- (void)presentArticleId {
-}
-//특정 게시물리스트 실행
-- (void)presentMenuId {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-
-}
 
 #pragma mark - NCSDKManagerDelegate
 - (void)ncSDKViewDidLoad {
@@ -84,6 +71,7 @@
     NSLog(@"ncSDKViewDidUnLoad");
 }
 
+#pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     [[NCSDKManager getSharedInstance] setParentViewController:self];
