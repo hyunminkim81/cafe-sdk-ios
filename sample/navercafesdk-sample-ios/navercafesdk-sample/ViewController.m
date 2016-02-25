@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
-@interface ViewController () <NCSDKManagerDelegate>
+@interface ViewController () <NCSDKManagerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -30,9 +30,13 @@
     
     UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(button1.frame), 40, 40)];
     [button2 setImage:[UIImage imageNamed:@"icon2.png"] forState:UIControlStateNormal];
-    [button2 addTarget:self action:@selector(touchButton2) forControlEvents:UIControlEventTouchUpInside];
+    [button2 addTarget:self action:@selector(presentMenuId) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
-    
+
+    UIButton *button3 = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(button2.frame), 40, 40)];
+    [button3 setImage:[UIImage imageNamed:@"icon3.png"] forState:UIControlStateNormal];
+    [button3 addTarget:self action:@selector(touchButton3) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button3];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,16 +53,27 @@
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
 }
+- (void)touchButton3 {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"바로가기" delegate:self cancelButtonTitle:@"취소" otherButtonTitles:nil, nil];
+    [alert addButtonWithTitle:@"게시글"];
+    [alert addButtonWithTitle:@"공지사항"];
+    [alert addButtonWithTitle:@"메뉴리스트"];
+    [alert addButtonWithTitle:@"게시글리스트"];
+    [alert addButtonWithTitle:[NSString stringWithFormat:@"투명도 슬라이더"]];
+    [alert show];
+}
 //공지사항 탭으로 시작
 - (void)presentTab {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
-    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:1];
+
 }
 //특정 게시물 실행
 - (void)presentArticleId {
+}
+//특정 게시물리스트 실행
+- (void)presentMenuId {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
 
-    [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:36];
 }
 
 #pragma mark - NCSDKManagerDelegate
@@ -69,4 +84,20 @@
     NSLog(@"ncSDKViewDidUnLoad");
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+    if ([title isEqualToString:@"게시글"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:36];
+    } else if ([title isEqualToString:@"공지사항"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:1];
+    } else if ([title isEqualToString:@"메뉴리스트"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:3];
+    } else if ([title isEqualToString:@"게시글리스트"]) {
+        [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:4];
+    } else if ([title hasPrefix:@"투명도"]) {
+        [[NCSDKManager getSharedInstance] disableTransparentSlider:NO];
+    }
+    
+}
 @end

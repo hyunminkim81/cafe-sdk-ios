@@ -57,6 +57,12 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
 - (void)setGameUserId:(NSString *)gameUserId fieldName:(NSString *)fieldName;
 
 /*
+ 투명도 조절 기능 제거
+ */
+- (void)disableTransparentSlider:(BOOL)disable;
+
+#pragma mark - present
+/*
  네이버 카페 Root ViewController에 다른 ViewController를 실행
  */
 - (void)presentViewController:(id)viewController;
@@ -91,6 +97,12 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
                                          content:(NSString *)content
                                         filePath:(NSString *)filePath;
 
+/*
+ 네이버 카페 게시글 리스트 실행
+ */
+- (void)presentArticleListViewControllerWithMenuId:(NSInteger)menuId;
+
+#pragma mark - dismiss
 /*
  네이버 카페 ViewController에 실행된 다른 ViewController 제거
  */
