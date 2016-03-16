@@ -40,7 +40,6 @@
 		4AAB66641C1166C600400C6D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB66521C1166C600400C6D /* AFURLSessionManager.m */; };
 		4AAB66651C1166C600400C6D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB66541C1166C600400C6D /* UIImageView+AFNetworking.m */; };
 		4AAB66661C1166C600400C6D /* libNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB66561C1166C600400C6D /* libNaverLogin.a */; };
-		4AAB66671C1166C600400C6D /* NaverAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB66571C1166C600400C6D /* NaverAuth.bundle */; };
 		4AAB66681C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +104,6 @@
 		4AAB66531C1166C600400C6D /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		4AAB66541C1166C600400C6D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		4AAB66561C1166C600400C6D /* libNaverLogin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNaverLogin.a; sourceTree = "<group>"; };
-		4AAB66571C1166C600400C6D /* NaverAuth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NaverAuth.bundle; sourceTree = "<group>"; };
 		4AAB66581C1166C600400C6D /* NaverThirdPartyConstantsForApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaverThirdPartyConstantsForApp.h; sourceTree = "<group>"; };
 		4AAB66591C1166C600400C6D /* NaverThirdPartyLoginConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaverThirdPartyLoginConnection.h; sourceTree = "<group>"; };
 		4AAB665A1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLoginThirdPartyOAuth20InAppBrowserViewController.h; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				4AAB66561C1166C600400C6D /* libNaverLogin.a */,
-				4AAB66571C1166C600400C6D /* NaverAuth.bundle */,
 				4AAB66581C1166C600400C6D /* NaverThirdPartyConstantsForApp.h */,
 				4AAB66591C1166C600400C6D /* NaverThirdPartyLoginConnection.h */,
 				4AAB665A1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */,
@@ -367,7 +364,6 @@
 				4A4DD91B1C7EBCA300F7A1E3 /* icon3.png in Resources */,
 				4AA5BE441BFB296D00D6724F /* icon1.png in Resources */,
 				4A60CC4F1BDE4DB600E2BD99 /* Main.storyboard in Resources */,
-				4AAB66671C1166C600400C6D /* NaverAuth.bundle in Resources */,
 				4A60CC541BDE4DB600E2BD99 /* LaunchScreen.xib in Resources */,
 				4AAB65FB1C11480B00400C6D /* NaverCafeSDK.bundle in Resources */,
 				4AA5BE451BFB296D00D6724F /* icon2.png in Resources */,
