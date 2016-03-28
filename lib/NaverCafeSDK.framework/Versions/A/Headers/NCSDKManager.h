@@ -55,7 +55,7 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  네이버ID와 게임사용자ID 연동을 위해 사용자 게임사용자ID 세팅, fieldName 기본값:게임ID
  */
 - (void)setGameUserId:(NSString *)gameUserId fieldName:(NSString *)fieldName;
-
+- (void)syncGameUserId:(NSString *)gameUserId;
 /*
  투명도 조절 기능 제거
  */
@@ -71,6 +71,11 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  네이버 카페 메인 실행
  */
 - (void)presentMainViewController;
+
+/*
+ 네이버 카페 메인 종료
+ */
+- (void)dismissMainViewController;
 
 /*
  네이버 카페 메인 TabIndex로 실행
@@ -112,6 +117,7 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  네이버 카페 ViewController에 제일 상단 ViewController 제거
  */
 - (void)dismissTopViewController;
+- (void)showToast:(NSString *)str;
 
 #ifndef BUILD_REAL
 - (void)presentEtc;
@@ -128,4 +134,8 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  네이버 카페 종료 콜백
  */
 - (void)ncSDKViewDidUnLoad;
+
+- (void)ncSDKJoinedCafeMember;
+- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId;
+- (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId;
 @end

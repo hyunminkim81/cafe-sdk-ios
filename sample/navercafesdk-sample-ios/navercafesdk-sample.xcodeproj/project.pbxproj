@@ -41,6 +41,7 @@
 		4AAB66651C1166C600400C6D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB66541C1166C600400C6D /* UIImageView+AFNetworking.m */; };
 		4AAB66661C1166C600400C6D /* libNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB66561C1166C600400C6D /* libNaverLogin.a */; };
 		4AAB66681C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */; };
+		4ACA56181CA8CBFA00DB2E81 /* NaverAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		4AAB66591C1166C600400C6D /* NaverThirdPartyLoginConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaverThirdPartyLoginConnection.h; sourceTree = "<group>"; };
 		4AAB665A1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLoginThirdPartyOAuth20InAppBrowserViewController.h; sourceTree = "<group>"; };
 		4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLoginThirdPartyOAuth20InAppBrowserViewController.m; sourceTree = "<group>"; };
+		4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NaverAuth.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		4AAB66551C1166C600400C6D /* NaverLogin-thirdPartyModule */ = {
 			isa = PBXGroup;
 			children = (
+				4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */,
 				4AAB66561C1166C600400C6D /* libNaverLogin.a */,
 				4AAB66581C1166C600400C6D /* NaverThirdPartyConstantsForApp.h */,
 				4AAB66591C1166C600400C6D /* NaverThirdPartyLoginConnection.h */,
@@ -367,6 +370,7 @@
 				4A60CC541BDE4DB600E2BD99 /* LaunchScreen.xib in Resources */,
 				4AAB65FB1C11480B00400C6D /* NaverCafeSDK.bundle in Resources */,
 				4AA5BE451BFB296D00D6724F /* icon2.png in Resources */,
+				4ACA56181CA8CBFA00DB2E81 /* NaverAuth.bundle in Resources */,
 				4A60CC511BDE4DB600E2BD99 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

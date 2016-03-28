@@ -51,6 +51,7 @@
 }
 - (void)touchButton2 {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
 }
 - (void)touchButton3 {
@@ -59,7 +60,7 @@
     [alert addButtonWithTitle:@"공지사항"];
     [alert addButtonWithTitle:@"메뉴리스트"];
     [alert addButtonWithTitle:@"게시글리스트"];
-    [alert addButtonWithTitle:[NSString stringWithFormat:@"투명도 슬라이더"]];
+    [alert addButtonWithTitle:[NSString stringWithFormat:@"투명도 슬라이더 토글"]];
     [alert show];
 }
 
@@ -70,8 +71,18 @@
 - (void)ncSDKViewDidUnLoad {
     NSLog(@"ncSDKViewDidUnLoad");
 }
+- (void)ncSDKJoinedCafeMember {
+    NSLog(@"카페 가입 완료");
+}
+- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId {
+    NSLog(@"글쓰기 완료, 게시판 아이디[%@]", @(menuId));
+}
+- (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId {
+    NSLog(@"댓글쓰기 완료, 게시글 아이디[%@]", @(articleId));
+}
 
 #pragma mark - UIAlertViewDelegate
+static BOOL sliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     [[NCSDKManager getSharedInstance] setParentViewController:self];
@@ -84,7 +95,8 @@
     } else if ([title isEqualToString:@"게시글리스트"]) {
         [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:4];
     } else if ([title hasPrefix:@"투명도"]) {
-        [[NCSDKManager getSharedInstance] disableTransparentSlider:NO];
+        sliderToggle = !sliderToggle;
+        [[NCSDKManager getSharedInstance] disableTransparentSlider:sliderToggle];
     }
     
 }
