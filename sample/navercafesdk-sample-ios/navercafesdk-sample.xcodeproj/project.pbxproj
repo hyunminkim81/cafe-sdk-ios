@@ -110,6 +110,10 @@
 		4AFFF8FC1CD2F3EF00C3B280 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		4AFFF8FD1CD2F3EF00C3B280 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		4AFFF8FE1CD2F3EF00C3B280 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
+		4AFFF90E1CD2FEB400C3B280 /* NAVER-COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; name = "NAVER-COPYING"; path = "../../NAVER-COPYING"; sourceTree = "<group>"; };
+		4AFFF90F1CD2FEB400C3B280 /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = text; name = NOTICE; path = ../../NOTICE; sourceTree = "<group>"; };
+		4AFFF9101CD2FEB400C3B280 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,10 @@
 		4A60CC371BDE4DB600E2BD99 = {
 			isa = PBXGroup;
 			children = (
+				4AFFF9101CD2FEB400C3B280 /* README.md */,
+				4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */,
+				4AFFF90E1CD2FEB400C3B280 /* NAVER-COPYING */,
+				4AFFF90F1CD2FEB400C3B280 /* NOTICE */,
 				4AAB663E1C1166C600400C6D /* external-lib */,
 				4A60CC421BDE4DB600E2BD99 /* navercafesdk-sample */,
 				4A60CC5C1BDE4DB600E2BD99 /* navercafesdk-sampleTests */,
