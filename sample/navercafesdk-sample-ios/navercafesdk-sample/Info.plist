@@ -33,6 +33,7 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>navercafe</string>
 		<string>naversearchapp</string>
 		<string>naversearchthirdlogin</string>
 	</array>
