@@ -32,7 +32,7 @@ README.md   | readme 파일
 
 1. [네이버 아이디 로그인-4.0.6](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
 2. [AFNetworking](https://github.com/AFNetworking/AFNetworking)(UIImageView+AFNetworking)
-<br>1.x ~ 2.x 모두 사용 가능하며 2.6.1에서 테스트 진행했습니다.
+<br>1.x ~ 2.x 모두 사용 가능하며 2.6.3에서 테스트 진행했습니다.
 
 
 
