@@ -46,7 +46,7 @@
     [[NCSDKLoginManager getSharedInstance] finishNaverLoginWithURL:url];
     return YES;
 }
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     return UIInterfaceOrientationMaskAll;
 }
 @end

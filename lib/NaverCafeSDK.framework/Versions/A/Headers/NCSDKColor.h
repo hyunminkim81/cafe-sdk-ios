@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, GLColorDefine) {
     kGLColorGray4 = 0x999999,
     kGLColorBlack1 = 0x44484E,
     kGLColorBlack2 = 0x000000,
-    kGLColorGreen1 = 0x00D650,
+    kGLColorGreen1 = 0x00c73c,
     kGLColorBlue2 = 0x2E65D9,
 };
 
