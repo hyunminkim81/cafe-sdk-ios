@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
-@interface ViewController () <NCSDKManagerDelegate, UIAlertViewDelegate>
+#import <NaverCafeSDK/NCWidget.h>
+@interface ViewController () <NCSDKManagerDelegate, NCWidgetDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -58,8 +59,10 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"바로가기" delegate:self cancelButtonTitle:@"취소" otherButtonTitles:nil, nil];
     [alert addButtonWithTitle:@"게시글"];
     [alert addButtonWithTitle:@"공지사항"];
+    [alert addButtonWithTitle:@"이벤트"];
     [alert addButtonWithTitle:@"메뉴리스트"];
     [alert addButtonWithTitle:@"게시글리스트"];
+    [alert addButtonWithTitle:@"프로필"];
     [alert addButtonWithTitle:[NSString stringWithFormat:@"투명도 슬라이더 토글"]];
     [alert show];
 }
@@ -69,6 +72,8 @@
     NSLog(@"ncSDKViewDidLoad");
 }
 - (void)ncSDKViewDidUnLoad {
+    [[NCWidget getSharedInstance] setNcWidgetDelegate:self];
+    [[NCSDKManager getSharedInstance] startWidget];
     NSLog(@"ncSDKViewDidUnLoad");
 }
 - (void)ncSDKJoinedCafeMember {
@@ -81,6 +86,23 @@
     NSLog(@"댓글쓰기 완료, 게시글 아이디[%@]", @(articleId));
 }
 
+#pragma mark - NCWidgetDelegate
+- (void)ncWidgetPostArticle {
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
+}
+- (void)ncWidtetExecuteGLink {
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] presentMainViewController];
+}
+- (void)ncWidgetPostArticleWithImage {
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage menuId:10 subject:@"" content:@"" filePath:@""];
+}
+
 #pragma mark - UIAlertViewDelegate
 static BOOL sliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -89,11 +111,15 @@ static BOOL sliderToggle = NO;
     if ([title isEqualToString:@"게시글"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:36];
     } else if ([title isEqualToString:@"공지사항"]) {
-        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:1];
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeNotice];
+    } else if ([title isEqualToString:@"이벤트"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeEvent];
     } else if ([title isEqualToString:@"메뉴리스트"]) {
-        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:3];
-    } else if ([title isEqualToString:@"게시글리스트"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeMenuList];
+    } else if ([title isEqualToString:@"게시글 리스트"]) {
         [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:4];
+    } else if ([title isEqualToString:@"프로필"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeProfile];
     } else if ([title hasPrefix:@"투명도"]) {
         sliderToggle = !sliderToggle;
         [[NCSDKManager getSharedInstance] disableTransparentSlider:sliderToggle];
