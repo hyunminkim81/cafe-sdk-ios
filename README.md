@@ -11,7 +11,7 @@ v.1.7.0
 ####updated
 1. 위젯을 통하여 동영상 녹확 기능을 제공합니다.
 2. 콜백 API 개선 (투표 완료 콜백을 제공합니다)
-
+3. bitcode 지원 (arm64, armv7)
 
 ####fixed####
 1. CFBundleSupportedPlatforms 이슈 수정
@@ -32,7 +32,7 @@ README.md   | readme 파일
 의존 라이브러리
 -------------
 
-1. [네이버 아이디 로그인-4.0.6](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
+1. [네이버 아이디 로그인-4.0.7](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
 2. [AFNetworking](https://github.com/AFNetworking/AFNetworking)(UIImageView+AFNetworking)
 <br>1.x ~ 2.x 모두 사용 가능하며 2.6.3에서 테스트 진행했습니다.
 
