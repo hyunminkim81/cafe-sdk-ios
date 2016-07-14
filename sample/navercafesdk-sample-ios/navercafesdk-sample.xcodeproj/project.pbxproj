@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A291E921D37280000C0DFD5 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A291E911D37280000C0DFD5 /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A4DD91B1C7EBCA300F7A1E3 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A4DD91A1C7EBCA300F7A1E3 /* icon3.png */; };
 		4A60CC461BDE4DB600E2BD99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A60CC451BDE4DB600E2BD99 /* main.m */; };
 		4A60CC491BDE4DB600E2BD99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A60CC481BDE4DB600E2BD99 /* AppDelegate.m */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A291E911D37280000C0DFD5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		4A4DD91A1C7EBCA300F7A1E3 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
 		4A60CC401BDE4DB600E2BD99 /* navercafesdk-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "navercafesdk-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A60CC441BDE4DB600E2BD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A291E921D37280000C0DFD5 /* ReplayKit.framework in Frameworks */,
 				4AAB660E1C114D3900400C6D /* CoreGraphics.framework in Frameworks */,
 				4AAB660C1C114C4D00400C6D /* Foundation.framework in Frameworks */,
 				4A60CC701BDE4E7400E2BD99 /* MobileCoreServices.framework in Frameworks */,
@@ -149,6 +152,7 @@
 		4A60CC371BDE4DB600E2BD99 = {
 			isa = PBXGroup;
 			children = (
+				4A291E911D37280000C0DFD5 /* ReplayKit.framework */,
 				4AFFF9101CD2FEB400C3B280 /* README.md */,
 				4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */,
 				4AFFF90E1CD2FEB400C3B280 /* NAVER-COPYING */,

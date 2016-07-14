@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
-#import <NaverCafeSDK/NCWidget.h>
-@interface ViewController () <NCSDKManagerDelegate, NCWidgetDelegate, UIAlertViewDelegate>
+@interface ViewController () <NCSDKManagerDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -72,18 +71,31 @@
     NSLog(@"ncSDKViewDidLoad");
 }
 - (void)ncSDKViewDidUnLoad {
-    [[NCWidget getSharedInstance] setNcWidgetDelegate:self];
-    [[NCSDKManager getSharedInstance] startWidget];
     NSLog(@"ncSDKViewDidUnLoad");
 }
 - (void)ncSDKJoinedCafeMember {
     NSLog(@"카페 가입 완료");
 }
-- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId {
+- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId
+                attachImageCount:(NSInteger)imageCount
+                attachVideoCount:(NSInteger)videoCount {
     NSLog(@"글쓰기 완료, 게시판 아이디[%@]", @(menuId));
 }
 - (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId {
     NSLog(@"댓글쓰기 완료, 게시글 아이디[%@]", @(articleId));
+}
+- (void)ncSDKRequestScreenShot {
+    
+}
+- (void)ncSDKDidVoteAtArticle:(NSInteger)articleId {
+    NSLog(@"투표 완료, 게시글 아이디[%@]", @(articleId));
+}
+
+- (void)ncSDKWidgetPostArticleWithImage {
+    NSLog(@"ncSDKWidgetPostArticleWithImage");
+}
+- (void)ncSDKWidgetSuccessVideoRecord {
+    NSLog(@"ncSDKWidgetSuccessVideoRecord");
 }
 
 #pragma mark - NCWidgetDelegate
@@ -116,7 +128,7 @@ static BOOL sliderToggle = NO;
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeEvent];
     } else if ([title isEqualToString:@"메뉴리스트"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeMenuList];
-    } else if ([title isEqualToString:@"게시글 리스트"]) {
+    } else if ([title isEqualToString:@"게시글리스트"]) {
         [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:4];
     } else if ([title isEqualToString:@"프로필"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeProfile];
