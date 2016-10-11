@@ -26,9 +26,9 @@
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
     
     //Global
-    [[NCSDKManager getSharedInstance] setCountry:ENGLISH];
-    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
-                                             globalCafeId:1013329];
+//    [[NCSDKManager getSharedInstance] setCountry:ENGLISH];
+//    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
+//                                             globalCafeId:1013329];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
