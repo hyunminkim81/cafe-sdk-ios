@@ -27,8 +27,8 @@
     
     //Global
     [[NCSDKManager getSharedInstance] setCountry:ENGLISH];
-    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"g4G47zfRweZsoeeJXCJB"
-                                             globalCafeId:1013311];
+    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
+                                             globalCafeId:1013329];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
@@ -59,7 +59,7 @@
 - (void)touchButton2 {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"My Score" content:@"100 Point?"];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:6 subject:@"My Score" content:@"100 Point?"];
 }
 - (void)touchButton3 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
@@ -109,7 +109,7 @@
 - (void)ncWidgetPostArticle {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"My Score" content:@"100 Point?"];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:4 subject:@"My Score" content:@"100 Point?"];
 }
 - (void)ncWidtetExecuteGLink {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
@@ -128,7 +128,7 @@ static BOOL sliderToggle = NO;
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     if ([title isEqualToString:@"Article"]) {
-        [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:36];
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:1];
     } else if ([title isEqualToString:@"Notice"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeNotice];
     } else if ([title isEqualToString:@"Event"]) {
