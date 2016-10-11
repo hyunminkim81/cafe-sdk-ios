@@ -41,6 +41,7 @@
 		4A97BBAC1DACC0B000822E42 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A97BB9B1DACC0B000822E42 /* UIView+WebCacheOperation.m */; };
 		4A97BBAE1DACC0B900822E42 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97BBAD1DACC0B800822E42 /* ImageIO.framework */; };
 		4A97BBB01DACC0BE00822E42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97BBAF1DACC0BE00822E42 /* QuartzCore.framework */; };
+		4A97BBB41DACC77000822E42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A97BBB61DACC77000822E42 /* Localizable.strings */; };
 		4AA5BE441BFB296D00D6724F /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5BE421BFB296D00D6724F /* icon1.png */; };
 		4AA5BE451BFB296D00D6724F /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5BE431BFB296D00D6724F /* icon2.png */; };
 		4AAB65FB1C11480B00400C6D /* NaverCafeSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB65FA1C11480B00400C6D /* NaverCafeSDK.bundle */; };
@@ -134,6 +135,13 @@
 		4A97BB9B1DACC0B000822E42 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		4A97BBAD1DACC0B800822E42 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4A97BBAF1DACC0BE00822E42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4A97BBB51DACC77000822E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A97BBB71DACC77B00822E42 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A97BBB81DACC78300822E42 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A97BBB91DACC78A00822E42 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A97BBBA1DACC78F00822E42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A97BBBB1DACC79A00822E42 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A97BBBC1DACC7AC00822E42 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4AA5BE421BFB296D00D6724F /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		4AA5BE431BFB296D00D6724F /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		4AAB65FA1C11480B00400C6D /* NaverCafeSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NaverCafeSDK.bundle; path = ../../lib/NaverCafeSDK.bundle; sourceTree = "<group>"; };
@@ -297,6 +305,7 @@
 		4A60CC7C1BDE4EC900E2BD99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4A97BBB61DACC77000822E42 /* Localizable.strings */,
 				4AA5BE421BFB296D00D6724F /* icon1.png */,
 				4AA5BE431BFB296D00D6724F /* icon2.png */,
 				4A4DD91A1C7EBCA300F7A1E3 /* icon3.png */,
@@ -470,6 +479,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
+				ko,
+				"zh-Hans",
+				"zh-Hant",
+				th,
+				"en-US",
 			);
 			mainGroup = 4A60CC371BDE4DB600E2BD99;
 			productRefGroup = 4A60CC411BDE4DB600E2BD99 /* Products */;
@@ -491,6 +506,7 @@
 				4AA5BE441BFB296D00D6724F /* icon1.png in Resources */,
 				4A60CC4F1BDE4DB600E2BD99 /* Main.storyboard in Resources */,
 				4A60CC541BDE4DB600E2BD99 /* LaunchScreen.xib in Resources */,
+				4A97BBB41DACC77000822E42 /* Localizable.strings in Resources */,
 				4AAB65FB1C11480B00400C6D /* NaverCafeSDK.bundle in Resources */,
 				4AA5BE451BFB296D00D6724F /* icon2.png in Resources */,
 				4ACA56181CA8CBFA00DB2E81 /* NaverAuth.bundle in Resources */,
@@ -579,6 +595,21 @@
 				4A60CC531BDE4DB600E2BD99 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		4A97BBB61DACC77000822E42 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A97BBB51DACC77000822E42 /* Base */,
+				4A97BBB71DACC77B00822E42 /* ja */,
+				4A97BBB81DACC78300822E42 /* ko */,
+				4A97BBB91DACC78A00822E42 /* zh-Hans */,
+				4A97BBBA1DACC78F00822E42 /* zh-Hant */,
+				4A97BBBB1DACC79A00822E42 /* th */,
+				4A97BBBC1DACC7AC00822E42 /* en-US */,
+			);
+			name = Localizable.strings;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
