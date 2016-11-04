@@ -19,16 +19,16 @@
 
     // Do any additional setup after loading the view, typically from a nib.
     
-    //Only Korea
+    //use Naver Cafe (korea)
     [[NCSDKManager getSharedInstance] setNaverLoginClientId:@"197CymaStozo7X5r2qR5"
                                      naverLoginClientSecret:@"evCgKH1kJL"
                                                      cafeId:28290504];
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
     
-    //Global
-//    [[NCSDKManager getSharedInstance] setCountry:ENGLISH];
-//    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
-//                                             globalCafeId:1013329];
+    //use Plug (global)
+    [[NCSDKManager getSharedInstance] setCountry:ENGLISH];
+    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
+                                             globalCafeId:1013329];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
@@ -123,7 +123,7 @@
 }
 
 #pragma mark - UIAlertViewDelegate
-static BOOL sliderToggle = NO;
+static BOOL kSliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     [[NCSDKManager getSharedInstance] setParentViewController:self];
@@ -140,8 +140,8 @@ static BOOL sliderToggle = NO;
     } else if ([title isEqualToString:@"Profile"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeProfile];
     } else if ([title hasPrefix:@"Toggle"]) {
-        sliderToggle = !sliderToggle;
-        [[NCSDKManager getSharedInstance] disableTransparentSlider:sliderToggle];
+        kSliderToggle = !kSliderToggle;
+        [[NCSDKManager getSharedInstance] disableTransparentSlider:kSliderToggle];
     }
     
 }
