@@ -6,7 +6,7 @@ Cafe SDK에 대하여 자세히 알고싶으시면 [네이버 CafeSDK 공식카�
 
 ![Overviw](/guide/images/widget_screenshot.gif)
 
-v.2.1.0
+# v.2.1.0
 ####updated
 1. 세로모드 지원
 
