@@ -18,10 +18,17 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //use Naver Cafe (korea)
     [[NCSDKManager getSharedInstance] setNaverLoginClientId:@"197CymaStozo7X5r2qR5"
                                      naverLoginClientSecret:@"evCgKH1kJL"
                                                      cafeId:28290504];
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
+    
+    //use Plug (global)
+    [[NCSDKManager getSharedInstance] setCountry:ENGLISH];
+    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
+                                             globalCafeId:1013329];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
@@ -52,17 +59,17 @@
 - (void)touchButton2 {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:6 subject:@"My Score" content:@"100 Point?"];
 }
 - (void)touchButton3 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"바로가기" delegate:self cancelButtonTitle:@"취소" otherButtonTitles:nil, nil];
-    [alert addButtonWithTitle:@"게시글"];
-    [alert addButtonWithTitle:@"공지사항"];
-    [alert addButtonWithTitle:@"이벤트"];
-    [alert addButtonWithTitle:@"메뉴리스트"];
-    [alert addButtonWithTitle:@"게시글리스트"];
-    [alert addButtonWithTitle:@"프로필"];
-    [alert addButtonWithTitle:[NSString stringWithFormat:@"투명도 슬라이더 토글"]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+    [alert addButtonWithTitle:@"Article"];
+    [alert addButtonWithTitle:@"Notice"];
+    [alert addButtonWithTitle:@"Event"];
+    [alert addButtonWithTitle:@"Menu List"];
+    [alert addButtonWithTitle:@"Article List"];
+    [alert addButtonWithTitle:@"Profile"];
+    [alert addButtonWithTitle:[NSString stringWithFormat:@"Toggle Translate Slider"]];
     [alert show];
 }
 
@@ -74,21 +81,21 @@
     NSLog(@"ncSDKViewDidUnLoad");
 }
 - (void)ncSDKJoinedCafeMember {
-    NSLog(@"카페 가입 완료");
+    NSLog(@"Complete To Join Cafe");
 }
 - (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId
                 attachImageCount:(NSInteger)imageCount
                 attachVideoCount:(NSInteger)videoCount {
-    NSLog(@"글쓰기 완료, 게시판 아이디[%@]", @(menuId));
+    NSLog(@"Complete To Write, Menu ID[%@]", @(menuId));
 }
 - (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId {
-    NSLog(@"댓글쓰기 완료, 게시글 아이디[%@]", @(articleId));
+    NSLog(@"Complete Comment, Article ID[%@]", @(articleId));
 }
 - (void)ncSDKRequestScreenShot {
     
 }
 - (void)ncSDKDidVoteAtArticle:(NSInteger)articleId {
-    NSLog(@"투표 완료, 게시글 아이디[%@]", @(articleId));
+    NSLog(@"Complete to vote, Article ID[%@]", @(articleId));
 }
 
 - (void)ncSDKWidgetPostArticleWithImage {
@@ -102,7 +109,7 @@
 - (void)ncWidgetPostArticle {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:10 subject:@"제 점수는요" content:@"100점?"];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:4 subject:@"My Score" content:@"100 Point?"];
 }
 - (void)ncWidtetExecuteGLink {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
@@ -116,25 +123,25 @@
 }
 
 #pragma mark - UIAlertViewDelegate
-static BOOL sliderToggle = NO;
+static BOOL kSliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     [[NCSDKManager getSharedInstance] setParentViewController:self];
-    if ([title isEqualToString:@"게시글"]) {
-        [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:36];
-    } else if ([title isEqualToString:@"공지사항"]) {
+    if ([title isEqualToString:@"Article"]) {
+        [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:1];
+    } else if ([title isEqualToString:@"Notice"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeNotice];
-    } else if ([title isEqualToString:@"이벤트"]) {
+    } else if ([title isEqualToString:@"Event"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeEvent];
-    } else if ([title isEqualToString:@"메뉴리스트"]) {
+    } else if ([title isEqualToString:@"Menu List"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeMenuList];
-    } else if ([title isEqualToString:@"게시글리스트"]) {
+    } else if ([title isEqualToString:@"Article List"]) {
         [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:4];
-    } else if ([title isEqualToString:@"프로필"]) {
+    } else if ([title isEqualToString:@"Profile"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeProfile];
-    } else if ([title hasPrefix:@"투명도"]) {
-        sliderToggle = !sliderToggle;
-        [[NCSDKManager getSharedInstance] disableTransparentSlider:sliderToggle];
+    } else if ([title hasPrefix:@"Toggle"]) {
+        kSliderToggle = !kSliderToggle;
+        [[NCSDKManager getSharedInstance] disableTransparentSlider:kSliderToggle];
     }
     
 }
