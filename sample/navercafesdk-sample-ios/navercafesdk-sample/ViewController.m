@@ -58,7 +58,7 @@
 - (void)touchButton2 {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:6 subject:@"My Score" content:@"100 Point?"];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:-1 subject:@"" content:@""];
 }
 - (void)touchButton3 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
