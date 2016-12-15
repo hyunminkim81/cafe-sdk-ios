@@ -13,8 +13,8 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 - 프로젝트에 적용하기 위한 [위키 가이드](https://github.com/naver/cafe-sdk-ios/wiki)가 작성 되어 있다.
 
 # Communication
-- [개발 문의 사항](http://cafe.naver.com/ArticleList.nhn?search.clubid=28285034&search.menuid=13&search.boardtype=L)에 있는 질문과 답변이 적용하는데 도움이 될 수 있습니다.
-- 문의 사항이 있는 경우 [카페](http://cafe.naver.com/navercafesdk) 혹은 [e-mail](dl_navercafesdk@navercorp.com)을 사용 할 수 있습니다.
+- [개발 문의 사항](http://cafe.naver.com/ArticleList.nhn?search.clubid=28285034&search.menuid=13&search.boardtype=L)에 있는 질문과 답변이 적용하는데 도움이 될 수 있다.
+- 문의 사항이 있는 경우 [카페](http://cafe.naver.com/navercafesdk) 혹은 [e-mail](dl_navercafesdk@navercorp.com)을 사용한다.
 
 
 # Usages
@@ -78,7 +78,7 @@ PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
 
 
 ## NCSDKManager
-[상세 가이드](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85-%EC%83%81%EC%84%B8)
+[상세 가이드](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85-%EC%83%81%EC%84%B8)에서 자세한 내용을 확인 할 수 있다.
 
 ### presentMainViewController
 
