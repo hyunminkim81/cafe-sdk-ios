@@ -52,6 +52,7 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 
 PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
 
+한국 채널만 사용하는 경우 채널코드를 KOREAN으로 세팅한다.
 ```objective-c
     [[NCSDKManager getSharedInstance] setNaverLoginClientId:@"197CymaStozo7X5r2qR5"
                                      naverLoginClientSecret:@"evCgKH1kJL"
@@ -60,6 +61,8 @@ PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
     [[NCSDKLoginManager getSharedInstance] setNaverLoginURLScheme:@"gLinkSample"];
     
     [[NCSDKManager getSharedInstance] setParentViewController:self];
+    
+    [[NCSDKManager getSharedInstance] setChannelCode:KOREAN];
 ```
 
 
@@ -86,6 +89,24 @@ PLUG를 실행한다.
 
 ```objective-c
 [[NCSDKManager getSharedInstance] presentMainViewController];
+
+```
+
+### presentArticlePostViewControllerWithType
+
+PLUG를 실행한다.
+
+```objective-c
+
+NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+NSString *documentsPath = [paths objectAtIndex:0]; //Get the docs directory
+NSString *filePath = [documentsPath stringByAppendingPathComponent:@"GLAttachImage.png"]; //Add the file name
+
+[[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage 
+                                                                    menuId:-1 
+                                                                    subject:@"" 
+                                                                    content:@"" 
+                                                                    filePath:filePath];
 
 ```
 
