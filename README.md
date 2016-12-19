@@ -94,10 +94,13 @@ PLUG를 실행한다.
 
 ### presentArticlePostViewControllerWithType
 
-PLUG를 실행한다.
+이미지 첨부 글쓰기를 실행한다.
 
 ```objective-c
 
+//게임 엔진별 이미지 스크린샷 로직
+
+//이미지 경로
 NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 NSString *documentsPath = [paths objectAtIndex:0]; //Get the docs directory
 NSString *filePath = [documentsPath stringByAppendingPathComponent:@"GLAttachImage.png"]; //Add the file name
