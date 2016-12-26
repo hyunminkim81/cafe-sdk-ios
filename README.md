@@ -133,7 +133,7 @@ PLUG X버튼을 클릭할 때 위젯이 화면에 노출되는 여부를 설정�
 
 ### useWidgetVideoRecord
 
-PLUG 위젯에 녹화 버튼 노출 여부를 설정한다. (iOS 9.0 이상)
+PLUG 위젯에 녹화 버튼 노출 여부를 설정한다. (iOS 9.0 이상, A7 이상)
 
 
 ```objective-c
