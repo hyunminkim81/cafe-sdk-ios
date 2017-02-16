@@ -121,7 +121,7 @@ PLUG 뷰의 가로/세로를 세팅한다.
 
 ### showWidgetWhenUnloadSDK
 
-PLUG X버튼을 클릭할 때 위젯이 화면에 노출되는 여부를 설정한다.
+PLUG 접기버튼을 클릭할 때 위젯이 화면에 노출되는 여부를 설정한다.
 
 ```objective-c
 [[NCSDKManager getSharedInstance] setShowWidgetWhenUnloadSDK:YES];
