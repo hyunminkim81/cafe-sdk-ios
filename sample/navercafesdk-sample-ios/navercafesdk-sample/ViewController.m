@@ -58,7 +58,7 @@
 - (void)touchButton2 {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:-1 subject:@"" content:@""];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewController];
 }
 - (void)touchButton3 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
@@ -108,7 +108,7 @@
 - (void)ncWidgetPostArticle {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:4 subject:@"My Score" content:@"100 Point?"];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewController];
 }
 - (void)ncWidtetExecuteGLink {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
@@ -118,7 +118,7 @@
 - (void)ncWidgetPostArticleWithImage {
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage menuId:10 subject:@"" content:@"" filePath:@""];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage filePath:@""];
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -134,8 +134,6 @@ static BOOL kSliderToggle = NO;
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeEvent];
     } else if ([title isEqualToString:@"Menu List"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeMenuList];
-    } else if ([title isEqualToString:@"Article List"]) {
-        [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:4];
     } else if ([title isEqualToString:@"Profile"]) {
         [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeProfile];
     } else if ([title hasPrefix:@"Toggle"]) {
