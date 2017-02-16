@@ -13,6 +13,7 @@ v.2.3.0
     2) setCountry -> setChannelCode
 8. API 추가
     2) setWidgetStartPosition
+9. AFNetworking-3.1.0 적용
 
 ### fixed
 1. 알려진 이슈 수정
