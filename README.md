@@ -42,7 +42,7 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 
 ## Initialize
 
-### 한국 채널(네이버 카페)
+### 한국 채널(네이버 카페) - 글로벌 채널만 사용하는 경우 세팅하지 않는다.
 
 [네이버 아이디로 로그인](https://developers.naver.com/products/login/api)에 애플리케이션을 등록하고 받은 ClientId, ClientSecret 값을 세팅한다.
 
@@ -67,7 +67,7 @@ PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
 
 
 
-### 글로벌 채널 
+### 글로벌 채널 - 한국 채널만 사용하는 경우 세팅하지 않는다.
 [제휴 신청](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%B9%B4%ED%8E%98%20%EC%82%AC%EC%9A%A9)을 통해 받은 ConsumerKey, communityId 값을 세팅한다.
 
 PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
@@ -106,10 +106,7 @@ NSString *documentsPath = [paths objectAtIndex:0]; //Get the docs directory
 NSString *filePath = [documentsPath stringByAppendingPathComponent:@"GLAttachImage.png"]; //Add the file name
 
 [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage 
-                                                                    menuId:-1 
-                                                                    subject:@"" 
-                                                                    content:@"" 
-                                                                    filePath:filePath];
+                                                                  filePath:filePath];
 
 ```
 
@@ -194,6 +191,7 @@ README.md   | readme 파일
 <br>2.x 사용 가능하며 2.6.3에서 테스트 진행했습니다.
 - [SDWebImage-3.8.2](https://github.com/rs/SDWebImage)
 - [FLAnimatedImage-1.0.12](https://github.com/Flipboard/FLAnimatedImage)
+- ApiGateway-1.5.0
 
 
 # License

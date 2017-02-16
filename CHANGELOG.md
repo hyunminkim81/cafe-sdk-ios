@@ -1,3 +1,22 @@
+v.2.3.0
+-------------
+### updated
+1. 동영상/이미지 모아보기 기능 추가
+2. 접기/닫기 기능 개선
+3. 위젯 기능 개편
+4. 비공개 카페 테스트 가능하도록 변경
+5. 스페인어/프랑스어/독일어/인도네시아어 추가
+6. 네이버 로그인 관련 API 추가
+    1) NCNaverLoginManager.h
+7. API 변경
+    1) presentArticlePostViewController 관련 파람 변경
+    2) setCountry -> setChannelCode
+8. API 추가
+    2) setWidgetStartPosition
+
+### fixed
+1. 알려진 이슈 수정
+
 v.2.2.0
 -------------
 ####updated####
