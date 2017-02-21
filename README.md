@@ -98,25 +98,7 @@ PLUG를 실행한다.
 
 ```
 
-### 3-2. presentArticlePostViewControllerWithType
-
-이미지 첨부 글쓰기를 실행한다.
-
-```objective-c
-
-//게임 엔진별 이미지 스크린샷 로직
-
-//이미지 경로
-NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-NSString *documentsPath = [paths objectAtIndex:0]; //Get the docs directory
-NSString *filePath = [documentsPath stringByAppendingPathComponent:@"GLAttachImage.png"]; //Add the file name
-
-[[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage 
-                                                                  filePath:filePath];
-
-```
-
-### 3-3. orientationIsLandscape
+### 3-2. orientationIsLandscape
 
 PLUG 뷰의 가로/세로를 세팅한다.
 
@@ -125,58 +107,6 @@ PLUG 뷰의 가로/세로를 세팅한다.
 
 ```
 
-### 3-4. showWidgetWhenUnloadSDK
-
-PLUG 접기버튼을 클릭할 때 위젯이 화면에 노출되는 여부를 설정한다.
-
-```objective-c
-[[NCSDKManager getSharedInstance] setShowWidgetWhenUnloadSDK:YES];
-
-```
-
-### 3-5. useWidgetVideoRecord
-
-PLUG 위젯에 녹화 버튼 노출 여부를 설정한다. (iOS 9.0 이상, A7 이상)
-
-
-```objective-c
-[[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
-
-```
-
-### 3-6. CallBack Delegate
-PLUG에서는 PLUG에서 발생하는 사용자 이벤트를 콜백 함수로 전달해 준다.
-
-PLUG 실행/종료, 글작성(이미지/동영상 첨부 개수), 가입, 댓글 작성, 투표 등이 있다.
-
-```objective-c
-@property (nonatomic, weak) id<NCSDKManagerDelegate> ncSDKDelegate;
-
-@protocol NCSDKManagerDelegate <NSObject>
-@optional
-/*
- Started SDK
- */
-- (void)ncSDKViewDidLoad;
-/*
- Ended SDK
- */
-- (void)ncSDKViewDidUnLoad;
-
-- (void)ncSDKJoinedCafeMember;
-- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId
-                attachImageCount:(NSInteger)imageCount
-                attachVideoCount:(NSInteger)videoCount;
-- (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId;
-- (void)ncSDKRequestScreenShot;
-- (void)ncSDKDidVoteAtArticle:(NSInteger)articleId;
-
-- (void)ncSDKWidgetPostArticleWithImage;
-- (void)ncSDKWidgetSuccessVideoRecord;
-
-@end
-
-```
 # 폴더 구조
 
 
