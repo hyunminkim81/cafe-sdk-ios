@@ -14,7 +14,7 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 
 # Communication
 - [개발 문의 사항](http://cafe.naver.com/ArticleList.nhn?search.clubid=28285034&search.menuid=13&search.boardtype=L)에 있는 질문과 답변이 적용하는데 도움이 될 수 있다.
-- 문의 사항이 있는 경우 [카페](http://cafe.naver.com/navercafesdk) 혹은 [issue](https://github.com/naver/cafe-sdk-ios/issues)를 사용한다.
+- 문의 사항이 있는 경우 [카페](http://cafe.naver.com/navercafesdk)를 사용한다.
 
 
 # Usages
