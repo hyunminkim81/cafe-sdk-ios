@@ -66,7 +66,6 @@
     [alert addButtonWithTitle:@"Notice"];
     [alert addButtonWithTitle:@"Event"];
     [alert addButtonWithTitle:@"Menu List"];
-    [alert addButtonWithTitle:@"Article List"];
     [alert addButtonWithTitle:@"Profile"];
     [alert addButtonWithTitle:[NSString stringWithFormat:@"Toggle Translate Slider"]];
     [alert show];
@@ -102,23 +101,6 @@
 }
 - (void)ncSDKWidgetSuccessVideoRecord {
     NSLog(@"ncSDKWidgetSuccessVideoRecord");
-}
-
-#pragma mark - NCWidgetDelegate
-- (void)ncWidgetPostArticle {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewController];
-}
-- (void)ncWidtetExecuteGLink {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentMainViewController];
-}
-- (void)ncWidgetPostArticleWithImage {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage filePath:@""];
 }
 
 #pragma mark - UIAlertViewDelegate
