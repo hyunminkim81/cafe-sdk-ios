@@ -44,9 +44,9 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 
 
 
-## 2. Initialize
+## 3. Initialize
 
-### 2-1. 한국 채널(네이버 카페) - 글로벌 채널만 사용하는 경우 세팅하지 않는다.
+### 3-1. 한국 채널(네이버 카페) - 글로벌 채널만 사용하는 경우 세팅하지 않는다.
 
 [네이버 아이디로 로그인 애플리케이션 등록](https://developers.naver.com/apps/#/register?api=nvlogin)에서 받은 ClientId, ClientSecret 값을 세팅한다.
 
@@ -71,7 +71,7 @@ PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
 
 
 
-### 2-2. 글로벌 채널 - 한국 채널만 사용하는 경우 세팅하지 않는다.
+### 3-2. 글로벌 채널 - 한국 채널만 사용하는 경우 세팅하지 않는다.
 
 개설된 커뮤니티에 매니저 권한으로 접속한 후, [setting > Communities > In-App Community Setting](http://g.cafe.naver.com/plugsample/manage/consumer)으로 진입하여 '커뮤니티 ID 및 Consumer Key, Consumer Secret'를 발급받는다.
 
@@ -90,10 +90,10 @@ PLUG가 올라갈 부모 뷰 컨트롤러를 세팅한다.
 ```
 
 
-## 3. NCSDKManager
+## 4. NCSDKManager
 [상세 가이드](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85-%EC%83%81%EC%84%B8)에서 자세한 내용을 확인 할 수 있다.
 
-### 3-1. presentMainViewController
+### 4-1. presentMainViewController
 
 PLUG를 실행한다.
 
@@ -102,7 +102,7 @@ PLUG를 실행한다.
 
 ```
 
-### 3-2. orientationIsLandscape
+### 4-2. orientationIsLandscape
 
 PLUG 뷰의 가로/세로를 세팅한다.
 
