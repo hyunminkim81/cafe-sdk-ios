@@ -18,6 +18,10 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 
 
 # Usages
+## 1. 요구 사항
+- 애플리케이션 사용 환경: iOS 7.0 이상(64비트 아키텍처 지원, bitcode 지원)
+- IDE: XCode 6.0 이상
+
 ## 1. 프로젝트 설정
 네이버 카페 SDK를 사용하려면 XCode에서 다음과 같이 개발 환경을 설정한다.
 - Build Settings >  Other Linker Flags에 -ObjC 옵션을 추가한다.
