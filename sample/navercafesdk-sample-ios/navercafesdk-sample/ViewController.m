@@ -23,11 +23,14 @@
     [[NCSDKManager getSharedInstance] setNaverLoginClientId:@"197CymaStozo7X5r2qR5"
                                      naverLoginClientSecret:@"evCgKH1kJL"
                                                      cafeId:28290504];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
-    
     //use Plug (global)
     [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:@"IHCd_HmSiMcXOMC37xZ8"
                                               communityId:1013329];
+
+    [[NCSDKManager getSharedInstance] setParentViewController:self];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
+    [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
@@ -51,14 +54,11 @@
 }
 
 - (void)touchButton1 {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     [[NCSDKManager getSharedInstance] presentMainViewController];
 }
 - (void)touchButton2 {
-    [[NCSDKManager getSharedInstance] setParentViewController:self];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewController];
+    NSString *filePath = [self screenShotFilePath];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage filePath:filePath];
 }
 - (void)touchButton3 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
@@ -97,10 +97,11 @@
 }
 
 - (void)ncSDKWidgetPostArticleWithImage {
-    NSLog(@"ncSDKWidgetPostArticleWithImage");
+    NSString *filePath = [self screenShotFilePath];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage filePath:filePath];
 }
 - (void)ncSDKWidgetSuccessVideoRecord {
-    NSLog(@"ncSDKWidgetSuccessVideoRecord");
+    [[NCSDKManager getSharedInstance] presentArticlePostViewController];
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -123,5 +124,22 @@ static BOOL kSliderToggle = NO;
         [[NCSDKManager getSharedInstance] disableTransparentSlider:kSliderToggle];
     }
     
+}
+
+- (NSString *)screenShotFilePath {
+    UIView *targetScreen = self.view;
+    
+    UIGraphicsBeginImageContextWithOptions(targetScreen.bounds.size, targetScreen.opaque, 0.0);
+    [targetScreen.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screengrab = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *pngData = UIImagePNGRepresentation(screengrab);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *filePath = [documentsPath stringByAppendingPathComponent:@"GLAttachImage.png"];
+    [pngData writeToFile:filePath atomically:YES];
+    
+    return filePath;
 }
 @end
