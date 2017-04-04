@@ -59,6 +59,7 @@
 		4AAB66111C11533200400C6D /* NaverCafeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB66101C11533200400C6D /* NaverCafeSDK.framework */; };
 		4AAB66661C1166C600400C6D /* libNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB66561C1166C600400C6D /* libNaverLogin.a */; };
 		4AAB66681C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */; };
+		4AB3BBDB1E93304D00A2C6E2 /* README-en.md in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3BBDA1E93304D00A2C6E2 /* README-en.md */; };
 		4ACA56181CA8CBFA00DB2E81 /* NaverAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,7 @@
 		4AAB66591C1166C600400C6D /* NaverThirdPartyLoginConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaverThirdPartyLoginConnection.h; sourceTree = "<group>"; };
 		4AAB665A1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLoginThirdPartyOAuth20InAppBrowserViewController.h; sourceTree = "<group>"; };
 		4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLoginThirdPartyOAuth20InAppBrowserViewController.m; sourceTree = "<group>"; };
+		4AB3BBDA1E93304D00A2C6E2 /* README-en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README-en.md"; path = "../../README-en.md"; sourceTree = "<group>"; };
 		4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NaverAuth.bundle; sourceTree = "<group>"; };
 		4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		4AFFF90E1CD2FEB400C3B280 /* NAVER-COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; name = "NAVER-COPYING"; path = "../../NAVER-COPYING"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		4A60CC371BDE4DB600E2BD99 = {
 			isa = PBXGroup;
 			children = (
+				4AB3BBDA1E93304D00A2C6E2 /* README-en.md */,
 				4AFFF9101CD2FEB400C3B280 /* README.md */,
 				4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */,
 				4AFFF90E1CD2FEB400C3B280 /* NAVER-COPYING */,
@@ -547,13 +550,11 @@
 				4A97BBAB1DACC0B000822E42 /* UIImageView+WebCache.m in Sources */,
 				4A97BBA31DACC0B000822E42 /* SDWebImageDownloaderOperation.m in Sources */,
 				4A17BDFE1E55392B00B2D394 /* AFSecurityPolicy.m in Sources */,
-				4A60CC4C1BDE4DB600E2BD99 /* ViewController.m in Sources */,
 				4A17BDFC1E55392B00B2D394 /* AFHTTPSessionManager.m in Sources */,
 				4A97BB9F1DACC0B000822E42 /* SDImageCache.m in Sources */,
 				4A97BB9C1DACC0B000822E42 /* FLAnimatedImage.m in Sources */,
 				4A97BBA81DACC0B000822E42 /* UIImage+MultiFormat.m in Sources */,
 				4A97BB9D1DACC0B000822E42 /* FLAnimatedImageView.m in Sources */,
-				4A60CC491BDE4DB600E2BD99 /* AppDelegate.m in Sources */,
 				4A97BBAC1DACC0B000822E42 /* UIView+WebCacheOperation.m in Sources */,
 				4A97BBA91DACC0B000822E42 /* UIImage+WebP.m in Sources */,
 				4A97BBA51DACC0B000822E42 /* SDWebImagePrefetcher.m in Sources */,
@@ -561,6 +562,7 @@
 				4A97BB9E1DACC0B000822E42 /* NSData+ImageContentType.m in Sources */,
 				4A17BDFF1E55392B00B2D394 /* AFURLRequestSerialization.m in Sources */,
 				4A17BE011E55392B00B2D394 /* AFURLSessionManager.m in Sources */,
+				4AB3BBDB1E93304D00A2C6E2 /* README-en.md in Sources */,
 				4A17BE001E55392B00B2D394 /* AFURLResponseSerialization.m in Sources */,
 				4A17BDFD1E55392B00B2D394 /* AFNetworkReachabilityManager.m in Sources */,
 				4A97BBA11DACC0B000822E42 /* SDWebImageDecoder.m in Sources */,
@@ -568,6 +570,8 @@
 				4A97BBAA1DACC0B000822E42 /* UIImageView+HighlightedWebCache.m in Sources */,
 				4A97BBA61DACC0B000822E42 /* UIButton+WebCache.m in Sources */,
 				4A97BBA21DACC0B000822E42 /* SDWebImageDownloader.m in Sources */,
+				4A60CC4C1BDE4DB600E2BD99 /* ViewController.m in Sources */,
+				4A60CC491BDE4DB600E2BD99 /* AppDelegate.m in Sources */,
 				4A60CC461BDE4DB600E2BD99 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
