@@ -59,8 +59,8 @@
 		4AAB66111C11533200400C6D /* NaverCafeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB66101C11533200400C6D /* NaverCafeSDK.framework */; };
 		4AAB66661C1166C600400C6D /* libNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB66561C1166C600400C6D /* libNaverLogin.a */; };
 		4AAB66681C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */; };
-		4AB3BBDB1E93304D00A2C6E2 /* README-en.md in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3BBDA1E93304D00A2C6E2 /* README-en.md */; };
 		4ACA56181CA8CBFA00DB2E81 /* NaverAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */; };
+		4ACD70651E9F681400AA517D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACD70641E9F681400AA517D /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +175,7 @@
 		4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLoginThirdPartyOAuth20InAppBrowserViewController.m; sourceTree = "<group>"; };
 		4AB3BBDA1E93304D00A2C6E2 /* README-en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README-en.md"; path = "../../README-en.md"; sourceTree = "<group>"; };
 		4ACA56171CA8CBFA00DB2E81 /* NaverAuth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NaverAuth.bundle; sourceTree = "<group>"; };
+		4ACD70641E9F681400AA517D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		4AFFF90E1CD2FEB400C3B280 /* NAVER-COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; name = "NAVER-COPYING"; path = "../../NAVER-COPYING"; sourceTree = "<group>"; };
 		4AFFF90F1CD2FEB400C3B280 /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = text; name = NOTICE; path = ../../NOTICE; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACD70651E9F681400AA517D /* WebKit.framework in Frameworks */,
 				4A97BBB01DACC0BE00822E42 /* QuartzCore.framework in Frameworks */,
 				4A97BBAE1DACC0B900822E42 /* ImageIO.framework in Frameworks */,
 				4A291E921D37280000C0DFD5 /* ReplayKit.framework in Frameworks */,
@@ -268,6 +270,7 @@
 				4A60CC411BDE4DB600E2BD99 /* Products */,
 				4A60CC7C1BDE4EC900E2BD99 /* Resources */,
 				4A60CC7B1BDE4EBE00E2BD99 /* Framework */,
+				4ACD70631E9F681300AA517D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -429,6 +432,14 @@
 			path = "NaverLogin-thirdPartyModule";
 			sourceTree = "<group>";
 		};
+		4ACD70631E9F681300AA517D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ACD70641E9F681400AA517D /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +489,7 @@
 				TargetAttributes = {
 					4A60CC3F1BDE4DB600E2BD99 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = K9UP278937;
 					};
 					4A60CC581BDE4DB600E2BD99 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -562,7 +574,6 @@
 				4A97BB9E1DACC0B000822E42 /* NSData+ImageContentType.m in Sources */,
 				4A17BDFF1E55392B00B2D394 /* AFURLRequestSerialization.m in Sources */,
 				4A17BE011E55392B00B2D394 /* AFURLSessionManager.m in Sources */,
-				4AB3BBDB1E93304D00A2C6E2 /* README-en.md in Sources */,
 				4A17BE001E55392B00B2D394 /* AFURLResponseSerialization.m in Sources */,
 				4A17BDFD1E55392B00B2D394 /* AFNetworkReachabilityManager.m in Sources */,
 				4A97BBA11DACC0B000822E42 /* SDWebImageDecoder.m in Sources */,
@@ -729,6 +740,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = K9UP278937;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -736,7 +748,7 @@
 					"$(PROJECT_DIR)/../../lib",
 				);
 				INFOPLIST_FILE = "navercafesdk-sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,7 +757,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.navercorp.cafesdk.sample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -757,6 +769,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = K9UP278937;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -764,7 +777,7 @@
 					"$(PROJECT_DIR)/../../lib",
 				);
 				INFOPLIST_FILE = "navercafesdk-sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -773,7 +786,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.navercorp.cafesdk.sample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

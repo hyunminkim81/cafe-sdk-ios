@@ -31,6 +31,7 @@
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
     [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
+    [[NCSDKManager getSharedInstance] setUseWidgetScreenShot:YES];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];
@@ -103,7 +104,9 @@
 - (void)ncSDKWidgetSuccessVideoRecord {
     [[NCSDKManager getSharedInstance] presentArticlePostViewController];
 }
-
+- (void)ncSDKAppSchemeBanner:(NSString *)appScheme {
+    NSLog(@"ncSDKAppSchemeBanner %@", appScheme);
+}
 #pragma mark - UIAlertViewDelegate
 static BOOL kSliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

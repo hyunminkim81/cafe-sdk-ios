@@ -1,3 +1,14 @@
+v.2.4.0
+-------------
+### updated
+1. Pinned 공지 기능 추가
+2. 댓글 목록에 답글 3개 미리 보기 추가
+3. WKWebView 적용 (iOS)
+4. GLReachability 클래스명 변경 (iOS)
+
+### fixed
+1. 알려진 이슈 수정
+
 v.2.3.1
 -------------
 ### fixed
