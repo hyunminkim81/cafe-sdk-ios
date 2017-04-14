@@ -57,6 +57,7 @@ PLUG SDK를 사용하려면 XCode에서 다음과 같이 개발 환경을 설정
     - Security.framework
     - ImageIO.framework
     - QuartzCore.framework
+    - WebKit.framework
     - ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
 
 ### 3. 초기화
