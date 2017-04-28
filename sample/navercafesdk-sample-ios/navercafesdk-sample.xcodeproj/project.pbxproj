@@ -95,6 +95,7 @@
 		4A17BE0A1E553C1800B2D394 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A17BE0B1E553C2800B2D394 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A17BE0C1E553C4100B2D394 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A262C941EB1CE93009FF00A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A291E911D37280000C0DFD5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		4A4DD91A1C7EBCA300F7A1E3 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
 		4A60CC401BDE4DB600E2BD99 /* navercafesdk-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "navercafesdk-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -514,6 +515,7 @@
 				de,
 				id,
 				es,
+				ru,
 			);
 			mainGroup = 4A60CC371BDE4DB600E2BD99;
 			productRefGroup = 4A60CC411BDE4DB600E2BD99 /* Products */;
@@ -636,6 +638,7 @@
 				4A17BE0A1E553C1800B2D394 /* de */,
 				4A17BE0B1E553C2800B2D394 /* id */,
 				4A17BE0C1E553C4100B2D394 /* es */,
+				4A262C941EB1CE93009FF00A /* ru */,
 			);
 			name = Localizable.strings;
 			path = Resources;
