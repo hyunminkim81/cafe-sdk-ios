@@ -277,7 +277,6 @@
 				4A60CC411BDE4DB600E2BD99 /* Products */,
 				4A60CC7C1BDE4EC900E2BD99 /* Resources */,
 				4A60CC7B1BDE4EBE00E2BD99 /* Framework */,
-				4ACD70631E9F681300AA517D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,6 +347,7 @@
 				4A60CC731BDE4E8300E2BD99 /* CoreMedia.framework */,
 				4A60CC711BDE4E7C00E2BD99 /* SystemConfiguration.framework */,
 				4A60CC6F1BDE4E7400E2BD99 /* MobileCoreServices.framework */,
+				4ACD70641E9F681400AA517D /* WebKit.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -437,14 +437,6 @@
 				4AAB665B1C1166C600400C6D /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */,
 			);
 			path = "NaverLogin-thirdPartyModule";
-			sourceTree = "<group>";
-		};
-		4ACD70631E9F681300AA517D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4ACD70641E9F681400AA517D /* WebKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
