@@ -1,3 +1,11 @@
+v.2.5.0
+-------------
+### updated
+1. 본분/댓글 번역기능 추가
+2. 지원 언어 추가 (브라질, 포르투갈, 이탈리아, 멕시코, 터키, 베트남)
+3. 녹화 인터페이스 제공
+4. 네이버 로그인 라이브러리 사용시 최초 세팅한 URLScheme, delegate 갱신하도록 변경 
+
 v.2.4.5
 -------------
 ### updated
@@ -16,6 +24,8 @@ v.2.4.0
 2. 댓글 목록에 답글 3개 미리 보기 추가
 3. WKWebView 적용 (iOS)
 4. GLReachability 클래스명 변경 (iOS)
+5. SDK 홈 배너 클릭시 발생하는 이벤트를 delegate로도 처리되도록 추가 (ncSDKAppSchemeBanner:)
+* 기존에는 AppDelegate openURL을 호출
 
 ### fixed
 1. 알려진 이슈 수정
