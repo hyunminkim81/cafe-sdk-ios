@@ -30,9 +30,9 @@ If you have any questions regarding working this SDK, please [visit our issue pa
 
 ### 1. Requirements
 
-- Applications: iOS 7.0 or later (64-bit architecture and bitcode supported)
+- Applications: iOS 8.0 or later (64-bit architecture and bitcode supported)
 - Video recording: iOS 9.0 or later, A7 or later
-- IDE: XCode 6.0 or later
+- IDE: XCode 7.0 or later
 
 ### 2. Configure a Project
 
