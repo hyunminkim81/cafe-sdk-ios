@@ -30,7 +30,6 @@
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
-    [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
     [[NCSDKManager getSharedInstance] setUseWidgetScreenShot:YES];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];

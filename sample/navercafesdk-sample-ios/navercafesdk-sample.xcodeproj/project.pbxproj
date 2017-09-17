@@ -14,7 +14,6 @@
 		4A17BE001E55392B00B2D394 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDF91E55392B00B2D394 /* AFURLResponseSerialization.m */; };
 		4A17BE011E55392B00B2D394 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDFB1E55392B00B2D394 /* AFURLSessionManager.m */; };
 		4A17BE081E55393300B2D394 /* libApiGateway-MAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A17BE071E55393300B2D394 /* libApiGateway-MAC.a */; };
-		4A291E921D37280000C0DFD5 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A291E911D37280000C0DFD5 /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A4DD91B1C7EBCA300F7A1E3 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A4DD91A1C7EBCA300F7A1E3 /* icon3.png */; };
 		4A60CC461BDE4DB600E2BD99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A60CC451BDE4DB600E2BD99 /* main.m */; };
 		4A60CC491BDE4DB600E2BD99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A60CC481BDE4DB600E2BD99 /* AppDelegate.m */; };
@@ -197,7 +196,6 @@
 				4ACD70651E9F681400AA517D /* WebKit.framework in Frameworks */,
 				4A97BBB01DACC0BE00822E42 /* QuartzCore.framework in Frameworks */,
 				4A97BBAE1DACC0B900822E42 /* ImageIO.framework in Frameworks */,
-				4A291E921D37280000C0DFD5 /* ReplayKit.framework in Frameworks */,
 				4A17BE081E55393300B2D394 /* libApiGateway-MAC.a in Frameworks */,
 				4AAB660E1C114D3900400C6D /* CoreGraphics.framework in Frameworks */,
 				4AAB660C1C114C4D00400C6D /* Foundation.framework in Frameworks */,
