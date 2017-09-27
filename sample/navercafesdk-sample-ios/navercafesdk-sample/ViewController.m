@@ -31,6 +31,7 @@
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
     [[NCSDKManager getSharedInstance] setUseWidgetScreenShot:YES];
+    [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
     
     UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
     [button1 setImage:[UIImage imageNamed:@"icon1.png"] forState:UIControlStateNormal];

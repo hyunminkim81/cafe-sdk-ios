@@ -31,6 +31,7 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 
 #pragma mark - Widget property
 @property (nonatomic, assign) BOOL showWidgetWhenUnloadSDK;
+@property (nonatomic, assign) BOOL useWidgetVideoRecord NS_AVAILABLE_IOS(9_0);
 @property (nonatomic, assign) BOOL useWidgetScreenShot;
 
 #pragma mark - class

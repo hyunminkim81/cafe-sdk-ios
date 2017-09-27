@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1270D11F7B75CC003FB078 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A291E911D37280000C0DFD5 /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A17BDFC1E55392B00B2D394 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDF01E55392B00B2D394 /* AFHTTPSessionManager.m */; };
 		4A17BDFD1E55392B00B2D394 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDF31E55392B00B2D394 /* AFNetworkReachabilityManager.m */; };
 		4A17BDFE1E55392B00B2D394 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDF51E55392B00B2D394 /* AFSecurityPolicy.m */; };
@@ -193,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1270D11F7B75CC003FB078 /* ReplayKit.framework in Frameworks */,
 				4ACD70651E9F681400AA517D /* WebKit.framework in Frameworks */,
 				4A97BBB01DACC0BE00822E42 /* QuartzCore.framework in Frameworks */,
 				4A97BBAE1DACC0B900822E42 /* ImageIO.framework in Frameworks */,
