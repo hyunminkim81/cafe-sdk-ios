@@ -59,7 +59,10 @@ PLUG SDK를 사용하려면 XCode에서 다음과 같이 개발 환경을 설정
     - QuartzCore.framework
     - WebKit.framework
     - ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
-
+4. **Info.plist**의 사용자 권한 획득 옵션을 추가합니다.
+    - NSCameraUsageDescription
+    - NSPhotoLibraryUsageDescription
+    
 ### 3. 초기화
 
 PLUG SDK가 지원하는 언어에 따라 다음과 같이 PLUG SDK를 초기화합니다.
