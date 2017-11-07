@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NCSDKLanguage.h"
 
 #define GL_SDK_VERSION              @"2.5.5"
 
@@ -16,10 +15,9 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
 };
 typedef NS_ENUM(NSUInteger, GLTabType) {
     kGLTabTypeHome = 0,
-    kGLTabTypeNotice = 1,
-    kGLTabTypeEvent = 2,
-    kGLTabTypeMenuList = 3,
-    kGLTabTypeProfile = 4,
+    kGLTabTypeArticles = 1,
+    kGLTabTypeMedias = 2,
+    kGLTabTypeSerach = 3,
 };
 
 @protocol NCSDKManagerDelegate;
@@ -127,9 +125,6 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 #pragma mark - private function
 - (void)sdkWillCloseWithWidget:(BOOL)widget;
 - (id)sdkRootViewController;
-- (void)dismissViewController:(id)viewController;
-- (void)dismissTopViewController;
-- (void)presentViewController:(id)viewController;
 
 #pragma mark - test function
 - (void)showToast:(NSString *)str;
@@ -157,6 +152,11 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 
 - (void)ncSDKWidgetPostArticleWithImage;
 - (void)ncSDKWidgetSuccessVideoRecord;
+
+//Live callback
+- (void)ncSDKDidEndStreamingLiveViewCount:(NSInteger)viewCount
+                                likeCount:(NSInteger)likeCount;
+- (void)ncSDKDidEndWatchingLiveSeconds:(NSInteger)seconds;
 
 /*
  App Scheme
