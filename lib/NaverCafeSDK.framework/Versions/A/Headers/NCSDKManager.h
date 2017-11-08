@@ -7,8 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define GL_SDK_VERSION              @"2.5.5"
-
 typedef NS_ENUM(NSUInteger, GLArticlePostType) {
     kGLArticlePostTypeImage = 1,
     kGLArticlePostTypeVideo = 2,
@@ -159,7 +157,7 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 - (void)ncSDKDidEndWatchingLiveSeconds:(NSInteger)seconds;
 
 /*
- App Scheme
+ App Scheme 처리
  */
 - (void)ncSDKAppSchemeBanner:(NSString *)appScheme;
 
