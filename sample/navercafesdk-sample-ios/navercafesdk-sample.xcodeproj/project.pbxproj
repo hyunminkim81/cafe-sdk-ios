@@ -520,7 +520,7 @@
 				TargetAttributes = {
 					4A60CC3F1BDE4DB600E2BD99 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = K9UP278937;
+						DevelopmentTeam = U6VV7FMD97;
 					};
 					4A60CC581BDE4DB600E2BD99 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -787,7 +787,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = K9UP278937;
+				DEVELOPMENT_TEAM = U6VV7FMD97;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -805,7 +805,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink.ent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -818,7 +818,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = K9UP278937;
+				DEVELOPMENT_TEAM = U6VV7FMD97;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -836,7 +836,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink.ent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -29,7 +29,6 @@
 
     [[NCSDKManager getSharedInstance] setParentViewController:self];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
     [[NCSDKManager getSharedInstance] setUseWidgetScreenShot:YES];
     [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
     
@@ -48,20 +47,25 @@
     [button3 addTarget:self action:@selector(touchButton3) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
 }
-
+- (void)setOrientationMode {
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 - (void)touchButton1 {
+    [self setOrientationMode];
     [[NCSDKManager getSharedInstance] presentMainViewController];
 }
 - (void)touchButton2 {
+    [self setOrientationMode];
     NSString *filePath = [self screenShotFilePath];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage filePath:filePath];
 }
 - (void)touchButton3 {
+    [self setOrientationMode];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
     [alert addButtonWithTitle:@"Article"];
     [alert addButtonWithTitle:@"Notice"];
