@@ -48,7 +48,6 @@ PLUG SDK를 사용하려면 XCode에서 다음과 같이 개발 환경을 설정
     - FLAnimatedImage  
     - AFNetworking  
     - 네이버 아이디로 로그인
-    - KaleidoCore.framework(Embedded Libraries에 추가합니다)
 3. **Build Phases**의 **Link Binary With Libraries**에 다음 라이브러리를 추가합니다. 추가한 라이브러리의 **Status**는 **Required**로 설정합니다.
     - AVKit.framework
     - AVFoundation.framework
