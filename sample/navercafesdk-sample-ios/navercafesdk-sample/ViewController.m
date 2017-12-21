@@ -67,11 +67,6 @@
 - (void)touchButton3 {
     [self setOrientationMode];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"ShortCut" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
-    [alert addButtonWithTitle:@"Article"];
-    [alert addButtonWithTitle:@"Notice"];
-    [alert addButtonWithTitle:@"Event"];
-    [alert addButtonWithTitle:@"Menu List"];
-    [alert addButtonWithTitle:@"Profile"];
     [alert addButtonWithTitle:[NSString stringWithFormat:@"Toggle Translate Slider"]];
     [alert show];
 }
@@ -115,21 +110,10 @@
 static BOOL kSliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-//    [[NCSDKManager getSharedInstance] setParentViewController:self];
-//    if ([title isEqualToString:@"Article"]) {
-//        [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:1];
-//    } else if ([title isEqualToString:@"Notice"]) {
-//        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeNotice];
-//    } else if ([title isEqualToString:@"Event"]) {
-//        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeEvent];
-//    } else if ([title isEqualToString:@"Menu List"]) {
-//        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeMenuList];
-//    } else if ([title isEqualToString:@"Profile"]) {
-//        [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:kGLTabTypeProfile];
-//    } else if ([title hasPrefix:@"Toggle"]) {
-//        kSliderToggle = !kSliderToggle;
-//        [[NCSDKManager getSharedInstance] disableTransparentSlider:kSliderToggle];
-//    }
+    if ([title hasPrefix:@"Toggle"]) {
+        kSliderToggle = !kSliderToggle;
+        [[NCSDKManager getSharedInstance] disableTransparentSlider:kSliderToggle];
+    }
     
 }
 

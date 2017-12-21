@@ -77,7 +77,7 @@ typedef NS_ENUM(NSUInteger, KFClientResult) {
 EXPORT
 @interface KFClient : NSObject
 
-@property(nonatomic, strong) KFAuthentication *mAuth;
+@property(nonatomic, strong) KFAuthentication * _Nonnull mAuth;
 
 /**
  * Synchronous version of open()
@@ -95,7 +95,7 @@ EXPORT
  * @param syncType value of KFSyncType
  * @param block a callback method to get notified whether client activation has succeeded or not
  */
-- (void)open:(KFSyncType)syncType block:(void (^)(KFClientResult))block;
+- (void)open:(KFSyncType)syncType block:(void (^ _Nonnull)(KFClientResult))block;
 
 /**
  * ### This feature will be expanded later ###
@@ -107,7 +107,7 @@ EXPORT
  * @param aOption KFAutoSyncOption
  * @see KFAutoSyncOption
  */
-- (bool)setAutoSync:(KFAutoSyncOption *)aOption;
+- (bool)setAutoSync:(KFAutoSyncOption * _Nonnull)aOption;
 
 /**
  * ### This feature will be expanded later ###
@@ -117,7 +117,7 @@ EXPORT
  * @param aOption KFPushOption
  * @see KFPushOption
  */
-- (bool)setPushService:(KFPushOption *)aOption;
+- (bool)setPushService:(KFPushOption * _Nonnull)aOption;
 
 /**
  * Deactivate KFClient
@@ -145,19 +145,33 @@ EXPORT
  *
  * @param block notify user whether synchronization has succeeded or failed
  */
-- (void)sync:(void (^)(KFSyncResult))block;
+- (void)sync:(void (^ _Nonnull)(KFSyncResult))block;
 
 /**
  * Returns 'true' if KFData exists in this client 'false' otherwise
  *
  * @param data pointer type of KFData which you want to know if this client has it
  */
-- (bool)contains:(KFData *)data;
+- (bool)contains:(KFData * _Nonnull)data;
+
+/**
+ * Returns the set of keys of attached the attached data types.
+ *
+ * @return The NSSet of keys of attached the attached data types.
+ */
+- (NSSet<NSString*> * _Nonnull)getKeySetOfAttachedDataTypes;
+
+/**
+ * Returns the map of the keys and all the data types.
+ *
+ * @return The NSDictionary of the keys and all the data types.
+ */
+- (NSDictionary<NSString*, KFData*> * _Nonnull)getAndLoadAllDataTypes;
 
 /**
  * Returns the key of KFClient
  */
-- (NSString *)getKey;
+- (NSString * _Nonnull)getKey;
 
 /**
  * Returns the current state of KFClient
@@ -169,12 +183,12 @@ EXPORT
 /**
  * Returns the workspace key
  */
-- (NSString *)getWorkspaceKey;
+- (NSString * _Nonnull)getWorkspaceKey;
 
 /**
  * Returns KFAuthentication which this client currently uses
  */
-- (KFAuthentication *)getAuthentication;
+- (KFAuthentication * _Nonnull)getAuthentication;
 
 /**
  * Sets an KFAuthentication
@@ -182,7 +196,7 @@ EXPORT
  * @param auth value of KFAuthentication
  * @return true if authentication is valid and KFClient can apply it, false otherwise
  */
-- (bool)setAuthentication:(KFAuthentication *)auth;
+- (bool)setAuthentication:(KFAuthentication * _Nonnull)auth;
 
 /**
  * Query user information from Kaleido server
@@ -191,13 +205,13 @@ EXPORT
  *
  * @return result of user query. this can be nullptr if user is not found.
  */
-- (KFUserQueryResult*)queryUser: (NSString*)userId;
+- (KFUserQueryResult* _Nonnull)queryUser: (NSString* _Nonnull)userId;
 
 /**
  * Returns 'true' if client contain informations to connect Kaleido server properly.
  */
 - (BOOL)isAvailable;
 
-- (KFData *)getData:(NSString *)key type:(KFDataType)type typeInfo:(KFTypeInfo *)typeInfo;
+- (KFData * _Nonnull)getData:(NSString * _Nonnull)key type:(KFDataType)type typeInfo:(KFTypeInfo * _Nonnull)typeInfo;
 
 @end

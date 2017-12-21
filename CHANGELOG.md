@@ -1,7 +1,13 @@
-v.3.0.0
+v.3.1.0
 -------------
 ### updated
-1. 라이브 기능 추가
+1. 라이브 기능 추가 (NaverCafeSDKLive.framework)
+2. 디자인 변경
+3. 인기글 적용
+4. 글로벌 커뮤니티 지역별 관리 기능 추가 (http://cafe.naver.com/navercafesdk/1550)
+5. 필독공지 노출 개수 증가 (3개)
+6. @3x 이미지 적용
+7. 위젯 위치 수정 (iPhone X Notch 회피)
 
 v.2.5.5
 -------------

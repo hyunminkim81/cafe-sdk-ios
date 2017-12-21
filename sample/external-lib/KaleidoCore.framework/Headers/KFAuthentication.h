@@ -30,9 +30,9 @@ EXPORT
  * @param aAccessToken  Access Token is required by NeoId authentication
  * @param onFailure     A callback to notify user about authentication failure or access token expiration
  *
- * @returns KFAuthentication    that represents NeoId authentication
+ * @returns KFAuthenticationResult that results for authentication.
  */
-+ (instancetype)authenticationWithNeoId:(NSString *)aServiceId serviceKey:(NSString *)aServiceKey consumerKey:(NSString *)aConsumerKey accessToken:(NSString *)aAccessToken failure:(void (^)(KFAuthentication *))onFailure;
++ (instancetype)authenticationWithNeoId:(NSString *)aServiceId serviceKey:(NSString *)aServiceKey consumerKey:(NSString *)aConsumerKey accessToken:(NSString *)aAccessToken failure:(void (^)(KFAuthenticationResult))onFailure;
 
 /**
  * Creates NaverOAuth authentication instance
@@ -40,9 +40,9 @@ EXPORT
  * @param aAccessToken  Access Token obtained from NaverOAuth authentication process
  * @param onFailure     A callback to notify user about authentication failure
  *
- * @returns KFAuthentication    that represents NaverOAuth authentication
+ * @returns KFAuthenticationResult that results for authentication.
  */
-+ (instancetype)authenticationWithNaverOAuth:(NSString *)aAccessToken failure:(void (^)(KFAuthentication *))onFailure;
++ (instancetype)authenticationWithNaverOAuth:(NSString *)aAccessToken failure:(void (^)(KFAuthenticationResult))onFailure;
 
 /**
  * Creates NaverCookie authentication instance
@@ -51,9 +51,9 @@ EXPORT
  * @param aCookieSession  NID_SES obtained from result of Naver login
  * @param onFailure       A callback to notify user about authentication failure
  *
- * @returns KFAuthentication    that represents NaverCookie authentication
+ * @returns KFAuthenticationResult that results for authentication.
  */
-+ (instancetype)authenticationWithNaverCookie:(NSString *)aCookieAuth cookieSession:(NSString *)aCookieSession failure:(void (^)(KFAuthentication *))onFailure;
++ (instancetype)authenticationWithNaverCookie:(NSString *)aCookieAuth cookieSession:(NSString *)aCookieSession failure:(void (^)(KFAuthenticationResult))onFailure;
 
 /**
  * Creates anonymously working NeoId authentication instance

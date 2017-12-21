@@ -14,8 +14,6 @@
 		4A17BE001E55392B00B2D394 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDF91E55392B00B2D394 /* AFURLResponseSerialization.m */; };
 		4A17BE011E55392B00B2D394 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A17BDFB1E55392B00B2D394 /* AFURLSessionManager.m */; };
 		4A17BE081E55393300B2D394 /* libApiGateway-MAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A17BE071E55393300B2D394 /* libApiGateway-MAC.a */; };
-		4A3BE3901F739E790010DFAA /* KaleidoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE38F1F739E790010DFAA /* KaleidoCore.framework */; };
-		4A3BE3911F739E790010DFAA /* KaleidoCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE38F1F739E790010DFAA /* KaleidoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A3BE3971F739F980010DFAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A60CC791BDE4EA600E2BD99 /* AVFoundation.framework */; };
 		4A3BE3981F739F9E0010DFAA /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A291E911D37280000C0DFD5 /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A3BE3991F739FA70010DFAA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE3941F739EBC0010DFAA /* AVKit.framework */; };
@@ -52,6 +50,9 @@
 		4A97BBAE1DACC0B900822E42 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97BBAD1DACC0B800822E42 /* ImageIO.framework */; };
 		4A97BBB01DACC0BE00822E42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A97BBAF1DACC0BE00822E42 /* QuartzCore.framework */; };
 		4A97BBB41DACC77000822E42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A97BBB61DACC77000822E42 /* Localizable.strings */; };
+		4A9A5A461FEB4FC10021E8DD /* NaverCafeSDKLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5A431FEB48060021E8DD /* NaverCafeSDKLive.framework */; };
+		4A9A5A471FEB4FD00021E8DD /* KaleidoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE38F1F739E790010DFAA /* KaleidoCore.framework */; };
+		4A9A5A481FEB4FD00021E8DD /* KaleidoCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE38F1F739E790010DFAA /* KaleidoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AA5BE441BFB296D00D6724F /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5BE421BFB296D00D6724F /* icon1.png */; };
 		4AA5BE451BFB296D00D6724F /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5BE431BFB296D00D6724F /* icon2.png */; };
 		4AAB65FB1C11480B00400C6D /* NaverCafeSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB65FA1C11480B00400C6D /* NaverCafeSDK.bundle */; };
@@ -83,7 +84,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4A3BE3911F739E790010DFAA /* KaleidoCore.framework in Embed Frameworks */,
+				4A9A5A481FEB4FD00021E8DD /* KaleidoCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +182,7 @@
 		4A97BBBA1DACC78F00822E42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4A97BBBB1DACC79A00822E42 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A97BBBC1DACC7AC00822E42 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A9A5A431FEB48060021E8DD /* NaverCafeSDKLive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaverCafeSDKLive.framework; path = ../../lib/NaverCafeSDKLive.framework; sourceTree = "<group>"; };
 		4AA5BE421BFB296D00D6724F /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		4AA5BE431BFB296D00D6724F /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		4AAB65FA1C11480B00400C6D /* NaverCafeSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NaverCafeSDK.bundle; path = ../../lib/NaverCafeSDK.bundle; sourceTree = "<group>"; };
@@ -213,6 +215,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9A5A461FEB4FC10021E8DD /* NaverCafeSDKLive.framework in Frameworks */,
+				4A9A5A471FEB4FD00021E8DD /* KaleidoCore.framework in Frameworks */,
+				4AAB66111C11533200400C6D /* NaverCafeSDK.framework in Frameworks */,
 				4A3BE3991F739FA70010DFAA /* AVKit.framework in Frameworks */,
 				4A3BE3981F739F9E0010DFAA /* ReplayKit.framework in Frameworks */,
 				4A3BE3971F739F980010DFAA /* AVFoundation.framework in Frameworks */,
@@ -226,8 +231,6 @@
 				4A60CC761BDE4E8900E2BD99 /* MediaPlayer.framework in Frameworks */,
 				4AAB660A1C114C3200400C6D /* UIKit.framework in Frameworks */,
 				4AAB66091C114C2800400C6D /* Security.framework in Frameworks */,
-				4A3BE3901F739E790010DFAA /* KaleidoCore.framework in Frameworks */,
-				4AAB66111C11533200400C6D /* NaverCafeSDK.framework in Frameworks */,
 				4A60CC781BDE4E9C00E2BD99 /* AssetsLibrary.framework in Frameworks */,
 				4A60CC741BDE4E8300E2BD99 /* CoreMedia.framework in Frameworks */,
 				4AAB66661C1166C600400C6D /* libNaverLogin.a in Frameworks */,
@@ -284,18 +287,9 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		4A3BE3931F739EBC0010DFAA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4A3BE3941F739EBC0010DFAA /* AVKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4A60CC371BDE4DB600E2BD99 = {
 			isa = PBXGroup;
 			children = (
-				4A3BE38F1F739E790010DFAA /* KaleidoCore.framework */,
 				4AB3BBDA1E93304D00A2C6E2 /* README-en.md */,
 				4AFFF9101CD2FEB400C3B280 /* README.md */,
 				4AFFF90D1CD2FEB400C3B280 /* CHANGELOG.md */,
@@ -307,7 +301,7 @@
 				4A60CC411BDE4DB600E2BD99 /* Products */,
 				4A60CC7C1BDE4EC900E2BD99 /* Resources */,
 				4A60CC7B1BDE4EBE00E2BD99 /* Framework */,
-				4A3BE3931F739EBC0010DFAA /* Frameworks */,
+				4A9A5A451FEB4FC10021E8DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -364,6 +358,9 @@
 		4A60CC7B1BDE4EBE00E2BD99 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				4A9A5A431FEB48060021E8DD /* NaverCafeSDKLive.framework */,
+				4A3BE3941F739EBC0010DFAA /* AVKit.framework */,
+				4A3BE38F1F739E790010DFAA /* KaleidoCore.framework */,
 				4AAB66101C11533200400C6D /* NaverCafeSDK.framework */,
 				4A97BBAF1DACC0BE00822E42 /* QuartzCore.framework */,
 				4A97BBAD1DACC0B800822E42 /* ImageIO.framework */,
@@ -444,6 +441,13 @@
 			path = "SDWebImage-3.8.2";
 			sourceTree = "<group>";
 		};
+		4A9A5A451FEB4FC10021E8DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4AAB663E1C1166C600400C6D /* external-lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,7 +519,7 @@
 		4A60CC381BDE4DB600E2BD99 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = navercorp;
 				TargetAttributes = {
 					4A60CC3F1BDE4DB600E2BD99 = {
@@ -699,14 +703,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -747,14 +757,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
