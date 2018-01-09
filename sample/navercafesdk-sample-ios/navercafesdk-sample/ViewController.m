@@ -106,6 +106,9 @@
 - (void)ncSDKAppSchemeBanner:(NSString *)appScheme {
     NSLog(@"ncSDKAppSchemeBanner %@", appScheme);
 }
+- (void)ncSDKDidEndWatchingLiveSeconds:(NSInteger)seconds {
+    NSLog(@"ncSDKDidEndWatchingLiveSeconds %@", @(seconds));
+}
 #pragma mark - UIAlertViewDelegate
 static BOOL kSliderToggle = NO;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
